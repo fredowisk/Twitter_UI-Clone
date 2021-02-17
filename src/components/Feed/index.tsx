@@ -8,16 +8,24 @@ const Feed: React.FC = () => {
     <Container>
       <TabMenu>
         <Tab>
-          <a tabIndex={0}>Tweets</a>
+          <a href="/" tabIndex={0}>
+            Tweets
+          </a>
         </Tab>
         <Tab>
-          <a tabIndex={0}>Tweets e respostas</a>
+          <a href="/" tabIndex={0}>
+            Tweets e respostas
+          </a>
         </Tab>
         <Tab>
-          <a tabIndex={0}>Mídia</a>
+          <a href="/" tabIndex={0}>
+            Mídia
+          </a>
         </Tab>
         <Tab>
-          <a tabIndex={0}>Curtidas</a>
+          <a href="/" tabIndex={0}>
+            Curtidas
+          </a>
         </Tab>
       </TabMenu>
       <Tweets>
