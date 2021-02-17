@@ -19,6 +19,7 @@ import {
   ProfileIcon,
   BotSide,
   Avatar,
+  PlusIcon,
   ProfileData,
   ExitIcon,
 } from './styles';
@@ -72,6 +73,7 @@ const MenuBar: React.FC<Props> = ({ toggleTheme }) => {
         </MenuButton>
 
         <Button>
+          <PlusIcon />
           <span>Tweetar</span>
         </Button>
       </TopSide>

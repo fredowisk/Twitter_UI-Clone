@@ -13,3 +13,4 @@ export { ArrowLeft } from 'styled-icons/heroicons-solid';
 export { Chat } from 'styled-icons/heroicons-outline';
 export { Twitter } from 'styled-icons/bootstrap';
 export { Moon } from 'styled-icons/boxicons-solid/index';
+export { Plus } from 'styled-icons/boxicons-regular/index';

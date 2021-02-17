@@ -8,7 +8,8 @@ import {
   Person,
   ExitToApp,
   Twitter,
-  Moon
+  Moon,
+  Plus
 } from '../../styles/Icons';
 
 export const Container = styled.div`
@@ -92,10 +93,18 @@ export const MenuButton = styled.button`
   }
 
   & + button:last-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     margin-top: 33px;
 
     width: 40px;
     height: 40px;
+
+    > svg {
+      width: 30px;
+    }
 
     > span {
       display: none;
@@ -105,6 +114,10 @@ export const MenuButton = styled.button`
     @media (min-width: 1280px) {
       width: 100%;
       height: unset;
+
+      > svg {
+        display: none;
+      }
 
       > span {
         display: inline;
@@ -160,11 +173,16 @@ export const ProfileIcon = styled(Person)`
   ${iconsCSS}
 `;
 
+export const PlusIcon = styled(Plus)`
+  ${iconsCSS}
+`;
+
 export const BotSide = styled.div`
   margin-top: 20px;
 
   display: flex;
   align-items: center;
+  justify-content: center;
 `;
 
 export const Avatar = styled.div`
