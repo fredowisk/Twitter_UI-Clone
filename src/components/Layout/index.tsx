@@ -6,11 +6,15 @@ import SideBar from '../SideBar';
 
 import { Container, Wrapper } from './styles';
 
-const Layout: React.FC = () => {
+interface Props {
+  toggleTheme(): void;
+}
+
+const Layout: React.FC<Props> = ({ toggleTheme }) => {
   return (
     <Container>
       <Wrapper>
-        <MenuBar />
+        <MenuBar toggleTheme={toggleTheme} />
         <Main />
         <SideBar />
       </Wrapper>

@@ -1,12 +1,25 @@
 import React from 'react';
 import Tweet from '../Tweet';
 
-import { Container, Tab, Tweets } from './styles';
+import { Container, TabMenu, Tab, Tweets } from './styles';
 
 const Feed: React.FC = () => {
   return (
     <Container>
-      <Tab>Tweets</Tab>
+      <TabMenu>
+        <Tab>
+          <a tabIndex={0}>Tweets</a>
+        </Tab>
+        <Tab>
+          <a tabIndex={0}>Tweets e respostas</a>
+        </Tab>
+        <Tab>
+          <a tabIndex={0}>Mídia</a>
+        </Tab>
+        <Tab>
+          <a tabIndex={0}>Curtidas</a>
+        </Tab>
+      </TabMenu>
       <Tweets>
         <Tweet />
         <Tweet />

@@ -6,7 +6,7 @@ export default createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
 
-    color: var(--white);
+    color: var(--text);
   }
 
   html, body, #root {
@@ -28,16 +28,17 @@ export default createGlobalStyle`
   }
 
   :root {
-    --primary: #000;
-    --secondary: #15181C;
-    --search: #202327;
+    --primary: ${props => props.theme.colors.primary};
+    --secondary: ${props => props.theme.colors.secondary};
+    --text: ${props => props.theme.colors.text};
+    --search: ${props => props.theme.colors.search};
     --white: #D9D9D9;
     --gray: #7A7A7A;
-    --outline: #2F3336;
+    --outline: ${props => props.theme.colors.outline};
     --retweet: #00C06B;
     --like: #E8265E;
     --twitter: #33A1F2;
-    --twitter-dark-hover: #011017;
-    --twitter-light-hover: #2C8ED6;
+    --twitter-dark-hover: ${props => props.theme.colors.twitterDarkHover};
+    --twitter-light-hover: ${props => props.theme.colors.twitterLightHover};
   }
 `;

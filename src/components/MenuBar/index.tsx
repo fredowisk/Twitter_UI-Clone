@@ -1,12 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { ThemeContext } from 'styled-components';
+
+import Switch from 'react-switch';
 
 import Button from '../Button/index';
 
 import {
   Container,
   TopSide,
+  TopButton,
   Logo,
   MenuButton,
+  MoonIcon,
   HomeIcon,
   BellIcon,
   EmailIcon,
@@ -18,12 +23,33 @@ import {
   ExitIcon,
 } from './styles';
 
-const MenuBar: React.FC = () => {
+interface Props {
+  toggleTheme(): void;
+}
+
+const MenuBar: React.FC<Props> = ({ toggleTheme }) => {
+  const { title } = useContext(ThemeContext);
   return (
     <Container>
       <TopSide>
-        <Logo />
-
+        <TopButton>
+          <Logo />
+          <Switch
+            onChange={toggleTheme}
+            checked={title === 'dark'}
+            checkedIcon={false}
+            uncheckedIcon={false}
+            checkedHandleIcon={<MoonIcon style={{ fill: '#FFF' }} />}
+            uncheckedHandleIcon={<MoonIcon style={{ fill: '#ffdf5d' }} />}
+            handleDiameter={30}
+            height={23}
+            width={50}
+            offColor={'#2C8ED6'}
+            onColor={'#edeeed'}
+            offHandleColor={'#edeeed'}
+            onHandleColor={'#2C8ED6'}
+          />
+        </TopButton>
         <MenuButton>
           <HomeIcon />
           <span>Página Inicial</span>

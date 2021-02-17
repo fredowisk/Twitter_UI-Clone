@@ -8,6 +8,7 @@ import {
   Person,
   ExitToApp,
   Twitter,
+  Moon
 } from '../../styles/Icons';
 
 export const Container = styled.div`
@@ -36,6 +37,13 @@ export const TopSide = styled.div`
   @media (min-width: 1280px) {
     align-items: flex-start;
   }
+`;
+
+export const TopButton = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 `;
 
 export const Logo = styled(Twitter)`
@@ -84,6 +92,7 @@ export const MenuButton = styled.button`
 
     > span {
       display: none;
+      color: var(--white);
     }
 
     @media (min-width: 1280px) {
@@ -114,6 +123,14 @@ const iconsCSS = css`
   width: 30px;
   height: 30px;
   color: var(--white);
+`;
+
+export const MoonIcon = styled(Moon)`
+  position: absolute;
+  top: 5px;
+  left: 7px;
+  width: 18px;
+  height: 18px;
 `;
 
 export const HomeIcon = styled(Home)`
