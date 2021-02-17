@@ -27,13 +27,12 @@ export const Tab = styled.div`
   font-size: 15px;
 
   outline: 0;
-  cursor: pointer;
 
   position: relative;
 
   color: var(--gray);
 
-  > a {
+  > button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -41,6 +40,9 @@ export const Tab = styled.div`
     width: 100%;
 
     color: var(--gray);
+
+    cursor: pointer;
+    font-weight: bold;
 
     padding: 20px 20px 15px;
     white-space: nowrap;

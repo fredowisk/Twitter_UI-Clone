@@ -40,10 +40,17 @@ export const TopSide = styled.div`
 `;
 
 export const TopButton = styled.div`
+display: flex;
+flex-direction: column;
+align-items: center;
+margin-bottom: 16.5px;
+
+@media(min-width: 1280px) {
+  flex-direction: row;
   width: 100%;
-  display: flex;
   justify-content: space-between;
-  align-items: center;
+  margin-bottom: 0;
+}
 `;
 
 export const Logo = styled(Twitter)`
